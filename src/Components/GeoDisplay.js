@@ -23,10 +23,10 @@ class GeoDisplay extends React.Component {
                 <Container>
                     <Card>
                         <Card.Body>
-                            <Card.Title>{this.props.location.display_name}</Card.Title>
+                            <Card.Title><h2>{this.props.location.display_name}</h2></Card.Title>
                             <Card.Text>
-                                {this.props.location.lat}
-                                {this.props.location.lon}
+                               Latitude: {this.props.location.lat} 
+                                <br></br>Longitude: {this.props.location.lon}
                             </Card.Text>
                             <Card.Img variant="top" src={this.props.map} />
                         </Card.Body>

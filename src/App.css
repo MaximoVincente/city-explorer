@@ -1,3 +1,8 @@
+#root{
+  background-color: #83b5e7;
+  height: 1600px;
+}
+
 .App {
   text-align: center;
 }
@@ -36,4 +41,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#headerDiv{
+  text-align: center;
+  background-color: #1883a0;
+  padding: 5px;
+  margin-bottom: 29px;
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.card{
+  margin-top: 29px;
+  margin-bottom: 29px;
+}
+
+button:hover{
+  background-color:  #61dafb;
+      color: white;
+      cursor: pointer;
+}
+
+button{
+  background-color: #1883a0;
+  color: aliceblue;
+}
+
+input{
+  background-color: aqua;
+  margin-left: 11px;
+}
+
+.card-body{
+  background-color: #6171ba;
+  border-radius: 11px;
+}
+
+.card-title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.card-text {
+  font-size: larger;
+  margin-left: 29px
 }

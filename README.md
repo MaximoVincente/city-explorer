@@ -29,3 +29,11 @@ An application that can give us different type of information to any city in the
 ## Credit and Collaboration
 
 [React Bootsrap Components](https://react-bootstrap.github.io/components/cards/)
+
+## Time Estimate
+
+- ***Name of Feature:*** Render Location, and Map of a searched city using API
+- ***Estimate of time needed to complete:*** 3 hours
+- ***Start Time:*** 6pm EST
+- ***Finish Time:*** 12am EST
+- ***Actual time needed:*** 6hrs

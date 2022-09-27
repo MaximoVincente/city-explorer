@@ -1,6 +1,13 @@
 # City Explorer
 
-## Data Flow for City Explorer Web Request-Response Cycle
+**Author**: Maximo Vincente Mejia
+**Version**: 1.0.2
+
+## Overview
+
+An application that can give us different type of information to any city in the world, with a single search.
+
+## Getting Started - Data Flow for City Explorer Web Request-Response Cycle
 
 ![Data Flow](public/data-flow.jpg)
 
@@ -10,3 +17,23 @@
 
 - The handleInput method handles the input that the user submits, and set state.
 - To render we onChange for handleInput, and onClick for handleSearch.
+
+## Architecture
+
+***JavaScript, React, Node.js, Geo-Location API, CSS***
+
+## Change Log
+
+09-27-2022 - Application can successfully render a City location with longitude, latitude, and map.
+
+## Credit and Collaboration
+
+[React Bootsrap Components](https://react-bootstrap.github.io/components/cards/)
+
+## Time Estimate
+
+- ***Name of Feature:*** Render Location, and Map of a searched city using API
+- ***Estimate of time needed to complete:*** 3 hours
+- ***Start Time:*** 6pm EST
+- ***Finish Time:*** 12am EST
+- ***Actual time needed:*** 6hrs

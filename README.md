@@ -20,11 +20,12 @@ An application that can give us different type of information to any city in the
 
 ## Architecture
 
-***JavaScript, React, Node.js, Geo-Location API, CSS***
+***JavaScript, React, Node.js, Geo-Location API, CSS, express.js***
 
 ## Change Log
 
 09-27-2022 - Application can successfully render a City location with longitude, latitude, and map.
+09-27-2022 - City Explorer now renders weather data for Seattle, Paris and Amman
 
 ## Credit and Collaboration
 
@@ -37,3 +38,15 @@ An application that can give us different type of information to any city in the
 - ***Start Time:*** 6pm EST
 - ***Finish Time:*** 12am EST
 - ***Actual time needed:*** 6hrs
+
+- ***Name of Feature:*** Use express as back end server to send data
+- ***Estimate of time needed to complete:*** 2 hours
+- ***Start Time:*** 5pm EST
+- ***Finish Time:*** 6:17pm EST
+- ***Actual time needed:*** 1hr 17min
+
+- ***Name of Feature:*** Render Weather
+- ***Estimate of time needed to complete:*** 2 hours
+- ***Start Time:*** 7pm EST
+- ***Finish Time:*** 8:38am EST
+- ***Actual time needed:*** 1hr 38min

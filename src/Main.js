@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import GeoDisplay from './Components/GeoDisplay';
 import LocationForm from './Components/LocationForm';
-import Forecast from './Components/Forecast';
+import Weather from './Components/Weather';
 
 class Main extends React.Component {
     constructor(props) {
@@ -73,7 +73,7 @@ class Main extends React.Component {
                         errorDisplay= {this.state.errorDisplay}
                         error= {this.state.error}
                     />
-            <Forecast location={this.state.location.display_name}
+            <Weather location={this.state.location.display_name}
                     weatherData= {this.state.weatherData}/>
             </>
         );

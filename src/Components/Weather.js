@@ -1,7 +1,7 @@
 import React from "react";
 
 
-class Forecast extends React.Component{
+class Weather extends React.Component{
 
 
 
@@ -22,4 +22,4 @@ class Forecast extends React.Component{
     }
 }
 
-export default Forecast;
+export default Weather;

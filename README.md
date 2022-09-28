@@ -10,6 +10,7 @@ An application that can give us different type of information to any city in the
 ## Getting Started - Data Flow for City Explorer Web Request-Response Cycle
 
 ![Data Flow](public/data-flow.jpg)
+![Data Flow for rendering weather data](public/data-flow2.jpg)
 
 ## WRRC Outline of Functions
 

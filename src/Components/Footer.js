@@ -5,7 +5,7 @@ class Footer extends React.Component {
         return (
             <>
                 <div id="footerDiv">
-                    <p>&copy; 2022 Maximo Vincente Mejia</p>
+                    {/* <p>&copy; 2022 Maximo Vincente Mejia</p> */}
                 </div>
             </>
         );
@@ -13,3 +13,4 @@ class Footer extends React.Component {
 }
 
 export default Footer;
+

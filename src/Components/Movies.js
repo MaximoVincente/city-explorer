@@ -10,12 +10,12 @@ class Movies extends Component {
 
     render() {
         return (
-            <Card style={{ width: '30.3rem' }}>
+            <Card className='mx-auto ' style={{ width: '30.3rem' }}>
                 <Card.Header className='h-auto'>
                     <Card.Title className='fw-bolder font-monospace'>{this.props.title}</Card.Title>
                 </Card.Header>
                 <ListGroup variant="flush">
-                        <Card.Img className='py-1 h-50 m-auto' variant="top"
+                        <Card.Img className='  mx-auto' variant="top"
                         src={this.props.poster_path} alt="Movie Poster" 
                         />     
                     <Card.Body>                         

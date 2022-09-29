@@ -20,8 +20,9 @@ class GeoDisplay extends React.Component {
                         </Alert>
                     </Container>
                 }
+
                 <Container>
-                    <Card>
+                    <Card className='w-75 mx-auto'>
                         <Card.Body>
                             <Card.Title className='fw-bolder font-monospace'><h2>{this.props.location.display_name}</h2></Card.Title>
                             <Card.Text>
@@ -32,6 +33,7 @@ class GeoDisplay extends React.Component {
                         </Card.Body>
                     </Card>
                 </Container>
+
             </>
         )
     }

@@ -19,6 +19,8 @@ class Main extends React.Component {
             errorDisplay: '',
             weatherData: [],
             movieData: [],
+            showWeatherHeader: false,
+            showMovieHeader: false,
 
         };
     }
@@ -34,7 +36,7 @@ class Main extends React.Component {
         try {
             const APILocation = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_EXPLORER_IQ_KEY}&q=${this.state.searchQuery}&format=json`;
             const responseLocation = await axios.get(APILocation);
-            this.setState({ location: responseLocation.data[0], displayMap: true}, this.loadData);
+            this.setState({ location: responseLocation.data[0], displayMap: true, showWeatherHeader: true, showMovieHeader:true}, this.loadData);
             // if there is an ERROR, code runs in the catch block
         } catch (error) {
             this.setState({ error: true,
@@ -48,6 +50,7 @@ class Main extends React.Component {
             map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_EXPLORER_IQ_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`,
         })
     }
+
 
     getWeather = async () => {
         try{
@@ -103,9 +106,11 @@ class Main extends React.Component {
                         errorDisplay= {this.state.errorDisplay}
                         error= {this.state.error}
                     />
+                    {this.state.showWeatherHeader ? <h1>Your Local Forecast</h1> : "" }
                 {this.state.weatherData && this.state.weatherData.map(weather => (<Weather lowTemp= {weather.lowTemp} highTemp={weather.highTemp} description={weather.desc} date={weather.time}/> ))}
 
-                {this.state.movieData && this.state.movieData.map(movie => (<Movies title={movie.title} overview={movie.overview} vote_average={movie.vote_average} vote_count={movie.vote_count} poster_path={movie.poster_path} popularity={movie.popularity} release_date={movie.release_date} />))}                
+                {this.state.showWeatherHeader ? <h1>Movies based on this City!</h1> : ""}
+                {this.state.movieData && this.state.movieData.map(movie => (<Movies  title={movie.title} overview={movie.overview} vote_average={movie.vote_average} vote_count={movie.vote_count} poster_path={movie.poster_path} popularity={movie.popularity} release_date={movie.release_date} />))}                
             </>
         );
     }

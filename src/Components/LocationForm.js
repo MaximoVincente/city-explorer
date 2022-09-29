@@ -7,10 +7,10 @@ class LocationForm extends React.Component{
     render(){
         return(
             <>
-                <Form onSubmit={this.props.handleSearch}>
+            
+                <Form onSubmit={this.props.handleSearch} >
                     <Form.Group className="mb-3" controlId="city">
-                        <Form.Label>City Explorer</Form.Label>
-                        <Form.Control onChange={this.props.handleInput} type="text" placeholder="Search for a City" />
+                        <Form.Control onChange={this.props.handleInput} type="text" placeholder="Search for a City"/>
                         <Form.Text className="text-muted">
                         </Form.Text>
                     </Form.Group>

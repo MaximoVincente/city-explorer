@@ -23,7 +23,7 @@ class GeoDisplay extends React.Component {
                 <Container>
                     <Card>
                         <Card.Body>
-                            <Card.Title><h2>{this.props.location.display_name}</h2></Card.Title>
+                            <Card.Title className='fw-bolder font-monospace'><h2>{this.props.location.display_name}</h2></Card.Title>
                             <Card.Text>
                                Latitude: {this.props.location.lat} 
                                 <br></br>Longitude: {this.props.location.lon}

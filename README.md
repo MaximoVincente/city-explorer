@@ -1,7 +1,7 @@
 # City Explorer
 
 **Author**: Maximo Vincente Mejia
-**Version**: 1.0.2
+**Version**: 1.0.3
 
 ## Overview
 
@@ -10,7 +10,8 @@ An application that can give us different type of information to any city in the
 ## Getting Started - Data Flow for City Explorer Web Request-Response Cycle
 
 ![Data Flow](public/data-flow.jpg)
-![Data Flow for rendering weather data](public/data-flow2.jpg)
+![Data Flow for rendering weather data from express json file](public/data-flow2.jpg)
+![Data Flow for rendering weather and movie dats from an external API](public/data-flow3.jpg)
 
 ## WRRC Outline of Functions
 
@@ -27,6 +28,7 @@ An application that can give us different type of information to any city in the
 
 09-27-2022 - Application can successfully render a City location with longitude, latitude, and map.
 09-27-2022 - City Explorer now renders weather data for Seattle, Paris and Amman
+09-28-2022 - City Explorer now renders weather, and movie data from an external API. Adding 16 day forecast, and information about movies of the city you searched
 
 ## Credit and Collaboration
 
@@ -49,5 +51,17 @@ An application that can give us different type of information to any city in the
 - ***Name of Feature:*** Render Weather
 - ***Estimate of time needed to complete:*** 2 hours
 - ***Start Time:*** 7pm EST
-- ***Finish Time:*** 8:38am EST
+- ***Finish Time:*** 8:38pm EST
 - ***Actual time needed:*** 1hr 38min
+
+- ***Name of Feature:*** Back-end and front-end Weather API
+- ***Estimate of time needed to complete:*** 1.5 hours
+- ***Start Time:*** 4:50pm EST
+- ***Finish Time:*** 8:40pm EST
+- ***Actual time needed:*** 4hr 10min
+
+- ***Name of Feature:*** Back-end and front-end Weather API
+- ***Estimate of time needed to complete:*** 1.5 hours
+- ***Start Time:*** 9:00pm EST
+- ***Finish Time:*** 9:56pm EST
+- ***Actual time needed:*** 56 minutes

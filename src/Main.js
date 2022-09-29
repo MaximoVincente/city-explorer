@@ -103,7 +103,6 @@ class Main extends React.Component {
                         errorDisplay= {this.state.errorDisplay}
                         error= {this.state.error}
                     />
-                    
                 {this.state.weatherData && this.state.weatherData.map(weather => (<Weather lowTemp= {weather.lowTemp} highTemp={weather.highTemp} description={weather.desc} date={weather.time}/> ))}
 
                 {this.state.movieData && this.state.movieData.map(movie => (<Movies title={movie.title} overview={movie.overview} vote_average={movie.vote_average} vote_count={movie.vote_count} poster_path={movie.poster_path} popularity={movie.popularity} release_date={movie.release_date} />))}                

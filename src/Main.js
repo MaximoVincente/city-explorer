@@ -3,6 +3,7 @@ import React from 'react';
 import GeoDisplay from './Components/GeoDisplay';
 import LocationForm from './Components/LocationForm';
 import Weather from './Components/Weather';
+import Movies from './Components/Movies';
 
 class Main extends React.Component {
     constructor(props) {
@@ -13,8 +14,11 @@ class Main extends React.Component {
             map: '',
             error: false,
             displayMap:false,
+            displayMovie: false,
+            displayWeather: false,
             errorDisplay: '',
             weatherData: [],
+            movieData: [],
 
         };
     }
@@ -64,9 +68,29 @@ class Main extends React.Component {
 
     }
 
+    getMovies = async () => {
+        try {
+            const API = `http://localhost:3001/movie?query=${this.state.searchQuery}`;
+            const url = `${API}/movie`;
+            const resp = await axios.get(url, {
+                params: {
+                    searchQuery: this.state.searchQuery,
+                }
+            });
+            this.setState({ movieData: resp.data })
+        } catch (error) {
+            this.setState({
+                error: true,
+                displayMovie: false
+            });
+            this.setState({ errorDisplay: error.message });
+        }
+    }
+
     loadData = async () => {
         await this.getMap();
         await this.getWeather();
+        await this.getMovies();
     }
 
     render() {
@@ -81,6 +105,8 @@ class Main extends React.Component {
                     />
                     
                 {this.state.weatherData && this.state.weatherData.map(weather => (<Weather lowTemp= {weather.lowTemp} highTemp={weather.highTemp} description={weather.desc} date={weather.time}/> ))}
+
+                {this.state.movieData && this.state.movieData.map(movie => (<Movies title={movie.title} overview={movie.overview} vote_average={movie.vote_average} vote_count={movie.vote_count} poster_path={movie.poster_path} popularity={movie.popularity} release_date={movie.release_date} />))}                
             </>
         );
     }

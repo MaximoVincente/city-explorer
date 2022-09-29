@@ -1,6 +1,6 @@
 #root{
   background-color: #83b5e7;
-  height: 4000px;
+  height: 100%;
 }
 
 
@@ -70,6 +70,7 @@
 .card{
   margin-top: 29px;
   margin-bottom: 29px;
+  display: inline-block;
 }
 
 button:hover{

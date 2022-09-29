@@ -1,9 +1,7 @@
 #root {
   background-color: #83b5e7;
-  height: 4000px;
+  height: 100%;
 }
-
-
 
 .App {
   text-align: center;
@@ -127,4 +125,9 @@ align-items: center;
 
 #city{
   font-size: x-large;
+}
+
+h1{
+  text-align: center;
+    background-color: #1883a0;
 }

@@ -47,9 +47,15 @@ class Main extends React.Component {
 
     getWeather = async () => {
         try{
-            const response = await axios.get(`http://localhost:3001/weather?searchQuery=${this.state.searchQuery}&lat=${this.state.location.lat}&lon=${this.state.location.lon}`);
-            console.log(response);
-            this.setState({weatherData: response.data});
+            const API = `http://localhost:3001/weather?city=${this.state.searchQuery}`;
+            const url = `${API}/weather`;
+            const resp = await axios.get(url,{
+                params: {
+                    searchQuery: this.state.searchQuery,
+                }
+            });
+            this.setState({weatherData: resp.data})
+            console.log('response data', resp.data);
         }catch (error){
             this.setState({error: true,
             displayWeather: false});
@@ -73,8 +79,8 @@ class Main extends React.Component {
                         errorDisplay= {this.state.errorDisplay}
                         error= {this.state.error}
                     />
-            <Weather location={this.state.location.display_name}
-                    weatherData= {this.state.weatherData}/>
+                    
+                {this.state.weatherData && this.state.weatherData.map(weather => (<Weather lowTemp= {weather.lowTemp} highTemp={weather.highTemp} description={weather.desc} date={weather.time}/> ))}
             </>
         );
     }

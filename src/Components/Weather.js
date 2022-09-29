@@ -1,25 +1,21 @@
-import React from "react";
+import { Component } from "react";
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+class Weather extends Component {
 
 
-class Weather extends React.Component{
 
 
 
     render() {
         return (
-            <>
-                <h3 className= "text-center">{this.props.location} </h3>
-                {this.props.weatherData.map((a,b) => {
-                    return(
-                        <div key={b}>
-                            <h4>{arguments.date}</h4>
-                            <h5>{a.description}</h5>
-                        </div>
-                    )
-                })}
-            </>
-        )
+            <Card style={{ width: '30.3rem' }}>
+                <ListGroup variant="flush">
+                    <ListGroup.Item><strong>Weather Forecast: </strong> Low of {this.props.lowTemp}, high of {this.props.highTemp} with  {this.props.description}</ListGroup.Item>
+                    <ListGroup.Item><strong>Date: </strong> {this.props.date} </ListGroup.Item>
+                </ListGroup>
+            </Card>
+        );
     }
 }
-
 export default Weather;

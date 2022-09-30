@@ -65,3 +65,10 @@ An application that can give us different type of information to any city in the
 - ***Start Time:*** 9:00pm EST
 - ***Finish Time:*** 9:56pm EST
 - ***Actual time needed:*** 56 minutes
+
+- ***Name of Feature:*** Modularize Back-end and Componetize front-end
+- ***Estimate of time needed to complete:*** 2 hours
+- ***Start Time:*** 6:27pm EST
+- ***Finish Time:*** 7:14pm EST
+- ***Actual time needed:*** 47 minutes
+**I had already componetized my front end, so very little changes had to be made, and modularizing the back end was fairly simple**

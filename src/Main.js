@@ -100,17 +100,23 @@ class Main extends React.Component {
         return (
             <>
             <LocationForm handleInput={this.handleInput} handleSearch={this.handleSearch} />
-                    <GeoDisplay
-                        location= {this.state.location}
-                        map= {this.state.map}
-                        errorDisplay= {this.state.errorDisplay}
-                        error= {this.state.error}
-                    />
-                    {this.state.showWeatherHeader ? <h1>Your Local Forecast</h1> : "" }
-                {this.state.weatherData && this.state.weatherData.map(weather => (<Weather lowTemp= {weather.lowTemp} highTemp={weather.highTemp} description={weather.desc} date={weather.time}/> ))}
+                <GeoDisplay
+                    location= {this.state.location}
+                    map= {this.state.map}
+                    errorDisplay= {this.state.errorDisplay}
+                    error= {this.state.error}
+                />
+                {this.state.showWeatherHeader ? <h1>Your Local Forecast</h1> : "" }
+                {this.state.weatherData && this.state.weatherData.map(weather => (
+                <Weather 
+                    lowTemp= {weather.lowTemp} 
+                    highTemp={weather.highTemp} 
+                    description={weather.desc} 
+                    date={weather.time}
+                />))}
 
-                {this.state.showWeatherHeader ? <h1>Movies based on this City!</h1> : ""}
-                {this.state.movieData && this.state.movieData.map(movie => (<Movies  title={movie.title} overview={movie.overview} vote_average={movie.vote_average} vote_count={movie.vote_count} poster_path={movie.poster_path} popularity={movie.popularity} release_date={movie.release_date} />))}                
+                {this.state.showMovieHeader ? <h1>Movies based on this City!</h1> : ""}
+                {this.state.movieData && <Movies movieData={this.state.movieData} />}
             </>
         );
     }

@@ -6,14 +6,15 @@ import Carousel from 'react-bootstrap/Carousel';
 class Movie extends Component {
 
     render() {
-        return (
-            <Carousel fade>       
-            <Carousel.Item>
+        return (   
+
+        <>
+            <div>
                     <img className='mx-auto' variant="top"
                     src={this.props.movie.poster_path} alt="Movie Poster"
                     />
+                </div>
                 <Carousel.Caption>
-                    {/* {this.props.movie} */}
                     {this.props.movie.title}
                     {this.props.movie.overview}
                     {this.props.movie.vote_average}
@@ -21,10 +22,11 @@ class Movie extends Component {
                     {this.props.movie.popularity}
                     {this.props.movie.release_date} 
             </Carousel.Caption>
-            </Carousel.Item>
-            </Carousel>
+        </>
+
         );
     }
 }
 
 export default Movie;
+
